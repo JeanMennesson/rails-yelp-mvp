@@ -6,17 +6,37 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-bristol = Restaurant.new(name: 'Epicure', address: '23 Chemin du val
-  Grand-Laviers', category: 'french')
+puts 'Cleaning database...'
+Restaurant.destroy_all
 
-amiens = Restaurant.new(name: 'Le Sérac', address: '13 Rue de la paix',
-  category: 'belgian')
+puts 'Creating restaurants...'
+restaurants_attributes = [
+  {
+    name:         'Epicure',
+    address:      '23 Chemin du val Grand-Laviers',
+    category: 'french'
+  },
+  {
+    name:         'Le Sérac',
+    address:      '13 Rue de la paix',
+    category: 'belgian'
+  },
+  {
+    name:         'Chez Gino',
+    address:      'Rue des postes Abbeville',
+    category: 'italian'
+  },
+  {
+    name:         'Grande Muraille',
+    address:      'Place des Anglais Bordeaux',
+    category: 'chinese'
+  },
+  {
+    name:         'Yamishi',
+    address:      '18 Rue de la chansonnette',
+    category: 'japanese'
+  }
+]
 
-chine = Restaurant.new(name: 'Grande Muraille', address: 'Place des Anglais
-  Bordeaux', category: 'chinese')
-
-italian = Restaurant.new(name: 'Chez Gino', address: 'Rue des postes Abbeville',
-  category: 'italian')
-
-japan = Restaurant.new(name: 'Yamishi', address: 'Rue Épagnette Menchecourt',
- category: 'japanese')
+Restaurant.create!(restaurants_attributes)
+puts 'Finished!'

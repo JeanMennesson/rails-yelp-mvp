@@ -13,3 +13,24 @@
 @import "layouts/index";
 @import "components/index";
 @import "pages/index";
+
+.thumbnail {
+  height: 450px;
+}
+
+.informations {
+  margin: 20px 55px;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.gray_block {
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+h1 {
+  font-style: bold;
+}
